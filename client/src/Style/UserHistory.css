@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .table {
+    min-width: 100%;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+}
+
+thead {
+  @apply bg-slate-800 text-white;
+}
+
+th.table-cell {
+  @apply p-6;
+}
+
+th.first-cell {
+  @apply rounded-l-lg;
+}
+
+th.last-cell {
+  @apply rounded-r-lg;
+}
+
+td.table-cell {
+  @apply p-5 text-center;
+}

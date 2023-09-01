@@ -1,0 +1,105 @@
+.glass {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  box-shadow: 0px 4px 15px rgb(94, 91, 91);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin: auto;
+  padding: 20px;
+  max-width: 80%;
+}
+
+@media (max-width: 400px) {
+  
+}
+.profile_img {
+  border: 4px solid white;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.textbox {
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: #5f63ec;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4a4ee6;
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 10px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .glass {
+    max-width: 100%;
+  }
+
+  .textbox {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.textbox {
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease, border 0.3s ease; /* Add transition property */
+}
+
+.textbox:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Apply a new box shadow when focused */
+  border: 1px solid transparent; /* Set border to transparent when focused */
+}
+
+.textarea {
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.textarea:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Apply a new box shadow when focused */
+  border: 1px solid transparent; /* Set border to transparent when focused */
+}
