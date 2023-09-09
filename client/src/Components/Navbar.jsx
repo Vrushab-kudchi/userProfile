@@ -18,10 +18,12 @@ function Navbar() {
   return (
     <div>
       <nav class="flex items-center justify-between flex-wrap bg-slate-400 p-6 ">
+        <Link to={'/'}>
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <img src={logo} alt="logo" className='h-14'/>
           <span class="font-semibold text-xl tracking-tight tracking-wide">Secure Crypt</span>
-        </div>
+          </div>
+        </Link>
         <div class="block lg:hidden">
           {/* Toggle button code */}
         </div>

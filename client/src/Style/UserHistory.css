@@ -1,34 +1,27 @@
 @media (max-width: 768px) {
   .table-container {
-    overflow-x: auto;
+    overflow-x: auto !important;
   }
 
   .table {
-    min-width: 100%;
+    min-width: 100% !important;
   }
 
   th,
   td {
-    white-space: nowrap;
+    white-space: nowrap !important;
+    border: 1px solid white !important; /* Added border style */
   }
 }
 
 thead {
-  @apply bg-slate-800 text-white;
+  @apply bg-slate-800 text-white !important;
 }
 
 th.table-cell {
-  @apply p-6;
-}
-
-th.first-cell {
-  @apply rounded-l-lg;
-}
-
-th.last-cell {
-  @apply rounded-r-lg;
+  @apply p-6 !important;
 }
 
 td.table-cell {
-  @apply p-5 text-center;
+  @apply p-5 text-center !important;
 }

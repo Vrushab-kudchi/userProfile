@@ -10,6 +10,7 @@ import Encrypt from './Components/Encrypt.jsx'
 import Decrypt from './Components/Decrypt.jsx'
 import PageNotFound from './Components/PageNotFound.jsx';
 import UserHistory from './Components/UserHistory';
+import Home from './Components/Home'
 
 //MIDDLEWARE
 import { AuthorizeUser, ProtectRoute } from './middleware/auth'
@@ -19,6 +20,10 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
+      element: <Home />
+    },
+    {
+      path: '/login',
       element: <Username />
     },
     {
