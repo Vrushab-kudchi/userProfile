@@ -252,3 +252,17 @@ export const resetPassword = async (req, res) => {
         res.status(401).send({error})
     }
 }
+
+//Delete Single History
+export const deleteHistory = async (req, res) => {
+    try
+    {
+        const { _id } = req.query;
+        await userHistoryModel.deleteOne({ _id });
+        res.status(200).send({ msg: "Deleted Successfully" });
+    }
+    catch
+    {
+        res.status(500).send({ error: "There was an error While Deleting" });
+    }
+}

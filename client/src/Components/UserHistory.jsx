@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../Style/UserHistory.css';
-import { history, getUserName } from '../helper/helper';
+import { history, getUserName, deleteHistory } from '../helper/helper';
 import Navbar from './Navbar';
 
 export default function UserHistory() {
@@ -12,9 +12,14 @@ export default function UserHistory() {
       const { data } = await history(userId);
       setUserHistory(data);
     };
-
     getHistory();
   }, []);
+
+  const handleDeleteClick = async (_id) => {
+    await deleteHistory(_id);
+    const updatedHistory = userHistory.filter((entry) => entry._id !== _id);
+    setUserHistory(updatedHistory);
+  };
 
   return (
     <>
@@ -47,7 +52,10 @@ export default function UserHistory() {
                     <td className="table-cell max-w-xs break-words">{entry.encryptedText}</td>
                     <td className="table-cell">{entry.secret_key}</td>
                     <td className="table-cell">
-                      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      <button
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        onClick={() => handleDeleteClick(entry._id)}
+                      >
                         Delete
                       </button>
                     </td>

@@ -24,4 +24,7 @@ router.get('/encryptionHistory', userController.getEncryptionHistory);
 router.put('/updateuser',Auth, userController.updateUser);
 router.put('/resetPassword', userController.resetPassword);
 
+
+//Delete Method
+router.delete('/deletehistory', userController.deleteHistory);
 export default router;

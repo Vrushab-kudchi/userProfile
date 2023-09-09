@@ -176,5 +176,16 @@ export const history = async (userId) => {
     catch (error)
     {
         return { error };
+    } 
+}
+
+export const deleteHistory = async (_id) => {
+    try
+    {
+        return await axios.delete('/api/deletehistory', { params: { _id } });
+    }
+    catch(error)
+    {
+        return { error };
     }
 }
